@@ -20,8 +20,9 @@ jobs:
         prjMakefilesGenerator.sh .
         make CONF=BusPirate_v3
         make CONF=BusPirate_v4
-        mv dist/BusPirate_v3/production/busPirate.X.production.hex $HOME/BusPirate_v3.${GITHUB_REF#refs/tags/}.hex
-        mv dist/BusPirate_v4/production/busPirate.X.production.hex $HOME/BusPirate_v4.${GITHUB_REF#refs/tags/}.hex
+        mv -v dist/BusPirate_v3/production/busPirate.X.production.hex $HOME/BusPirate_v3.${GITHUB_REF#refs/tags/}.hex
+        mv -v dist/BusPirate_v4/production/busPirate.X.production.hex $HOME/BusPirate_v4.${GITHUB_REF#refs/tags/}.hex
+        ls -l $HOME
 
 
     - name: Create a github release
