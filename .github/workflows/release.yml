@@ -31,5 +31,6 @@ jobs:
       with:
         prerelease: true
         files: BusPirate_*.hex
+        fail_on_unmatched_files: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
